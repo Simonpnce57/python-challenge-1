@@ -1,7 +1,7 @@
 # Menu dictionary
 menu = {
     "Snacks": {
-        "Cookie": .55,
+        "Cookie": .12,
         "Banana": .69,
         "Apple": .49,
         "Granola bar": 1.99
