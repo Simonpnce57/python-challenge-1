@@ -207,18 +207,23 @@ while place_order:
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
         # Keep ordering
 
-        if keep_ordering == "N":
+        if keep_ordering.upper() == "N":
          
          place_order = False 
 
         print("Keep Ordering Please. ")  
         
+    
+    
         # Since the customer decided to stop ordering, thank them 
         #for their order 
 
         keep_ordering.upper() == "Y"  
         
-        print("Thank You for your order. ")
+        print("Thank you for your order.")
+
+        
+    break
 
          # Complete the order their order
     
@@ -226,9 +231,11 @@ while place_order:
 
         # Exit the keep ordering question loop
 
-    break
  
         # Tell the customer to try again
+    if not menu_selection.isdigit():
+        print("Please enter a valid number.")
+        continue
    
 
     print("Invalid response, please enter Y or N. ")
@@ -247,6 +254,8 @@ print("--------------------------|--------|----------")
 for i in range(len(order)):
 
     # 7. Store the dictionary items as variables
+    quantity = int(input(f"How many {item_name}s would you like to order? "))
+order.append({"Item name": item_name, "Price": price, "Quantity": quantity})
 
         menu_item_name = order[i]["Item name "]
         price = order[i]["Price "]
